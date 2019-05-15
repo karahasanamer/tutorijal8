@@ -4,6 +4,7 @@ package ba.unsa.etf.rs.tutorijal8;
 import org.junit.jupiter.api.*;
 
 
+import java.sql.Driver;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ class PripremaTest {
 
     @BeforeEach
     void setUp() {
-        dao = TransportDAO.getInstance();
+        dao = TransportDdAO.getInstance();
     }
 
     @Test
