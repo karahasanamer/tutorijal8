@@ -1,10 +1,6 @@
 package ba.unsa.etf.rs.tutorijal8;
 
-
 import org.junit.jupiter.api.*;
-
-
-import java.sql.Driver;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -16,6 +12,7 @@ class PripremaTest {
 
     private TransportDAO dao;
 
+
     @BeforeAll
     static void vratiNaPocetak(){
         TransportDAO dao = TransportDAO.getInstance();
@@ -24,7 +21,7 @@ class PripremaTest {
 
     @BeforeEach
     void setUp() {
-        dao = TransportDdAO.getInstance();
+        dao = TransportDAO.getInstance();
     }
 
     @Test
@@ -72,7 +69,6 @@ class PripremaTest {
             dao.addDriver(new Driver("Priprema","Pripremović","2222222222222",LocalDate.now().minusYears(23),LocalDate.now().minusYears(1)));
             assertFalse(true);
         }
-
     }
 
     @Test

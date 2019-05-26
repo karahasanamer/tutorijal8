@@ -1,5 +1,4 @@
 package ba.unsa.etf.rs.tutorijal8;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,8 +10,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Zadatak1Test {
-
+public class Zadatak1Test {
     @BeforeEach
     void prepareDatabase(){
         TransportDAO dao = TransportDAO.getInstance();
@@ -41,7 +39,7 @@ class Zadatak1Test {
     void dodajIOtpustiVozaca() {
         InputStream defaultSystemIn = setupCustomInputStreamAndReturnStandardInputStream(
                 "dodaj vozaca\nTest\nTestovic\n1111111111111\n11.2.1997\n11.3.2018\n" +
-                "dodaj vozaca\nPriprema\nPripremovic\n2222222222222\n1.2.1990\n2.3.2017\n" + "otpusti vozaca\n1\n");
+                        "dodaj vozaca\nPriprema\nPripremovic\n2222222222222\n1.2.1990\n2.3.2017\n" + "otpusti vozaca\n1\n");
         String[] args= {"a","b"};
         Main.main(args);
         System.setIn(defaultSystemIn);
@@ -57,8 +55,8 @@ class Zadatak1Test {
     void dodajAutobus() {
         InputStream defaultSystemIn = setupCustomInputStreamAndReturnStandardInputStream(
                 "dodaj autobus\nMan\nX534\n59\n" +
-                "dodaj autobus\nIsuzu\nA77\n42\n" +
-                "dodaj autobus\nIcarbus\nB856\n47\n");
+                        "dodaj autobus\nIsuzu\nA77\n42\n" +
+                        "dodaj autobus\nIcarbus\nB856\n47\n");
 
         String[] args= {"a","b"};
         Main.main(args);
@@ -76,9 +74,9 @@ class Zadatak1Test {
     void ukloniAutobus() {
         InputStream defaultSystemIn = setupCustomInputStreamAndReturnStandardInputStream(
                 "dodaj autobus\nMan\nX534\n59\n" +
-                "dodaj autobus\nIsuzu\nA77\n42\n" +
-                "dodaj autobus\nIcarbus\nB856\n47\n" +
-                "ukloni autobus\n2\n");
+                        "dodaj autobus\nIsuzu\nA77\n42\n" +
+                        "dodaj autobus\nIcarbus\nB856\n47\n" +
+                        "ukloni autobus\n2\n");
 
         String[] args= {"a","b"};
         Main.main(args);

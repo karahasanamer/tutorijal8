@@ -1,5 +1,4 @@
 package ba.unsa.etf.rs.tutorijal8;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Zadatak2Test {
+public class Zadatak2Test {
 
     @BeforeEach
     void setUp() {
@@ -90,6 +89,7 @@ class Zadatak2Test {
         TransportDAO dao = TransportDAO.getInstance();
         Driver driver = dao.getDrivers().get(1);
         Bus bus = dao.getBusses().get(0);
+
         System.out.println(outputHolder.toString());
         assertAll(()->{
             assertTrue(outputHolder.toString().contains(expected));
